@@ -35,6 +35,7 @@ pip升级后可能出现Import Error：cannot import name main，处理方法：
 
 ipython安装
 	sudo apt-get install ipython3
-
+	
 系统Windows10
 	安装Anaconda
+    参考：https://mp.weixin.qq.com/s/a9P9runYrD6csWTtqFjAoA
