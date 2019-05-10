@@ -1,0 +1,40 @@
+系统：ubuntu 16.04
+
+系统自带python2.7,python3.5
+
+安装python3.7：
+	sudo add-apt-repository ppa:jonathonf/python3.7
+	sudo apt-get update
+	sudo apt-get install python3.7
+
+多版本切换问题：
+	update-alternatives
+
+	向系统中添加一个新的alternatives
+  	    --install <link> <name> <path> <priority>
+	    link：指向/etc/alternatives/<name>的符号引用
+	    name：这个链接组的名称
+	    path：这个命令对应的可执行文件的实际路径
+	    priority：优先级，在auto模式下，数字较大的选项有较高的优先级
+	    sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7 2
+	    sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
+
+	配置组内各可执行文件的优先级
+	    --config<name>
+	    sudo update-alternatives --config python
+		
+安装pip：
+	sudo apt-get install python3-pip
+
+升级pip:
+	sudo pip3 install --upgrade
+	
+pip升级后可能出现Import Error：cannot import name main，处理方法：
+	sudo vim /usr/bin/pip3
+	修改main为__main__,main()为_main()
+
+ipython安装
+	sudo apt-get install ipython3
+
+系统Windows10
+	安装Anaconda
